@@ -1,0 +1,56 @@
+@import url("//cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Pretendard, sans-serif;
+	background-color: #101010;
+	color: #fff;
+}
+
+.noselete {
+	-webkit-touch-callout: none !important;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+#title {
+	font-size: 5rem;
+	font-weight: 900;
+}
+
+#subtitle {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+#afterBirth {
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+.blink {
+	animation: blinker 0.2s linear;
+	--webkit-animation: blinker 0.2s linear;
+	-moz-animation: blinker 0.2s linear;
+	-ms-animation: blinker 0.2s linear;
+	-o-animation: blinker 0.2s linear;
+}
