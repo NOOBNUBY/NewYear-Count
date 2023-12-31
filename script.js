@@ -1,4 +1,4 @@
-const newYear = new Date(new Date().getFullYear() + 1, 0, 1, 0, 0, 0);
+const newYear = new Date(2024, 0);
 let diffSec;
 
 const blink = element => {
