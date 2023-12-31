@@ -1,4 +1,4 @@
-const birthDate = new Date("2007-02-06T00:00:00");
+const newYear = new Date(new Date().getFullYear() + 1, 0, 1, 0, 0, 0);
 let diffSec;
 
 const blink = element => {
@@ -7,9 +7,17 @@ const blink = element => {
 };
 
 const updateSec = () => {
-	diffSec = (new Date().getTime() - birthDate.getTime()) / 1000;
-	afterBirth.innerHTML = Math.round(diffSec);
+	const afterBirth = document.getElementById('afterBirth');
+	diffSec = (newYear.getTime() - new Date().getTime()) / 1000;
+	if (afterBirth) {
+		afterBirth.innerHTML = Math.round(diffSec);
+	}
 };
 
 setInterval(() => updateSec(), 1000);
-setInterval(() => blink(afterBirth), 950);
+setInterval(() => {
+    const afterBirth = document.getElementById('afterBirth');
+    if (afterBirth) {
+        blink(afterBirth);
+    }
+}, 950);
